@@ -1,0 +1,22 @@
+<h1 class="pt-5 ps-5 mb-4 roboto fw-semibold" style="color:#052C65">Доходы</h1>
+<div class="d-flex income-items" id="income-item-elements">
+
+    <div class="border rounded ms-5 p-3 d-flex justify-content-center cursor-pointer item-element" id="add-category" >
+        <img src="/../static/images/icon-plus.svg" class="align-self-center align-baseline pe-none me-2" alt="Plus">
+    </div>
+
+    <div class="modal fade" tabindex="-1" aria-hidden="true" id="deleteItem">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Вы действительно хотите удалить категорию? Связанные доходы будут удалены навсегда.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-yes" data-bs-dismiss="modal" id="remove-category">Да, удалить</button>
+                    <button type="button" class="btn btn-danger me-5" data-bs-dismiss="modal">Не удалять</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

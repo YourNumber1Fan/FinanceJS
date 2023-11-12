@@ -1,0 +1,60 @@
+<section class="content-form col-10 mt-5 pt-5 ms-5 ps-3" style="width: 1200px">
+    <h1 class="mb-5 text-color">
+        Доходы и расходы
+    </h1>
+    <div class="form-button d-flex mt-3 mb-3">
+        <button type="button" class="btn btn-success me-2" id="createIncome">Создать доход</button>
+        <button type="button" class="btn btn-danger" id="createExpense">Создать расход</button>
+    </div>
+    <div class="content-buttons d-flex flex-nowrap mt-4 mb-3">
+        <button type="button" class="btn btn-filter btn-outline-secondary px-3 py-2 me-3 active">Сегодня</button>
+        <button type="button" class="btn btn-filter btn-outline-secondary px-3 py-2 me-3">Неделя</button>
+        <button type="button" class="btn btn-filter btn-outline-secondary px-3 py-2 me-3">Месяц</button>
+        <button type="button" class="btn btn-filter btn-outline-secondary px-4 py-2 me-3">Год</button>
+        <button type="button" class="btn btn-filter btn-outline-secondary px-4 py-2 me-3">Все</button>
+        <button type="button" class="btn btn-filter btn-outline-secondary px-2 py-2 me-3" id="button-interval" disabled>Интервал</button>
+        <div class="content-dates d-flex flex-nowrap">
+            <div class="content-date d-flex flex-nowrap">
+                <label for="with" class="content-date-label fw-bold pt-2 me-3">с</label>
+                <input type="text" class="content-date-input p-2 form-control me-3" id="with"
+                       placeholder="Дата">
+            </div>
+            <div class="content-date d-flex flex-nowrap">
+                <label for="before" class="content-date-label fw-bold pt-2 me-3">по</label>
+                <input type="text" class="content-date-input p-2 form-control" id="before" placeholder="Дата">
+            </div>
+        </div>
+    </div>
+    <div class="content-table">
+        <table class="table table-hover mt-4">
+            <thead>
+            <tr class="text-center">
+                <th scope="col" class="fw-bold text-color col-2">№ операции</th>
+                <th scope="col" class="fw-bold text-color col-1">Тип</th>
+                <th scope="col" class="fw-bold text-color col-2">Категория</th>
+                <th scope="col" class="fw-bold text-color col-1">Сумма</th>
+                <th scope="col" class="fw-bold text-color col-2">Дата</th>
+                <th scope="col" class="fw-bold text-color col-4">Комментарий</th>
+            </tr>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-color fw-bold text-center border-0 py-5 pt-5 pb-3">
+                    Вы действительно хотите удалить операцию?
+                </div>
+                <div class="modal-footer border-0 pt-1 pb-5 d-flex justify-content-center">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="deleteOperation">Да, удалить</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="cancelDeleteOperation">Не удалять</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
